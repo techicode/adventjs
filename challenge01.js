@@ -7,21 +7,21 @@ tanto las letras n Y a, sin importar el orden, las mayúsculas o espacios.
 */
 
 const ovejasfiltradas = [
-    { name: 'Noa', color: 'azul' },
-    { name: 'Euge', color: 'rojo' },
-    { name: 'Navidad', color: 'rojo' },
-    { name: 'Ki Na Ma', color: 'rojo'}
-  ]
+  { name: 'Noa', color: 'azul' },
+  { name: 'Euge', color: 'rojo' },
+  { name: 'Navidad', color: 'rojo' },
+  { name: 'Ki Na Ma', color: 'rojo' },
+];
 
-  function contarOvejas(ovejas) {
-    // aquí tu magia
-    return ovejas.filter(
-        oveja => oveja.color === 'rojo' 
-        && /n/i.test(oveja.name) 
-        && /a/i.test(oveja.name));
-  }
+function contarOvejas(ovejas) {
+  // aquí tu magia
+  return ovejas.filter(
+    (oveja) =>
+      oveja.color === 'rojo' && /n/i.test(oveja.name) && /a/i.test(oveja.name)
+  );
+}
 
-  console.log(contarOvejas(ovejasfiltradas));
+console.log(contarOvejas(ovejasfiltradas));
 
-  // [{ name: 'Navidad', color: 'rojo' },
-  //  { name: 'Ki Na Ma', color: 'rojo' }]
+// [{ name: 'Navidad', color: 'rojo' },
+//  { name: 'Ki Na Ma', color: 'rojo' }]

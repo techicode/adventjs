@@ -12,22 +12,22 @@ Transforma el texto a un objeto que contenga el nombre de cada
 regalo y las veces que aparece. Por ejemplo, si tenemos el texto:
 */
 
-const carta = '  bici  coche balón _playstation  bici coche peluche'
+const carta = '  bici  coche balón _playstation  bici coche peluche';
 
-const listGifts = letter => {
-    letter = letter.trim();
-    letter = letter.replace(/\s\s+/g, ' ')
-    let gifts = letter.split(' ').filter(word => word[0] !== '_');
-    let obj = {};
-    gifts.forEach(gift => {
-        obj[gift] = obj[gift] ? obj[gift] + 1 : 1;
-    });
-    return obj;
-}
+const listGifts = (letter) => {
+  letter = letter.trim();
+  letter = letter.replace(/\s\s+/g, ' ');
+  let gifts = letter.split(' ').filter((word) => word[0] !== '_');
+  let obj = {};
+  gifts.forEach((gift) => {
+    obj[gift] = obj[gift] ? obj[gift] + 1 : 1;
+  });
+  return obj;
+};
 
-const regalos = listGifts(carta)
+const regalos = listGifts(carta);
 
-console.log(regalos)
+console.log(regalos);
 /*
 {
   bici: 2,
